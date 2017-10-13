@@ -1,0 +1,69 @@
+.list-unstyled li{
+cursor: pointer;
+}
+#play{
+	display: none;
+}
+#submitbtn{
+	display: none;
+	float: right;
+    margin-right: 10px;
+    margin-top: -50px;
+}
+.msg{
+	font-family: cursive;
+
+}
+.success{
+	color:red;
+	font-size: 1em;
+}
+.error{
+	color: red;
+	font-size: 1em;
+}
+tr:hover{
+	color: black;
+}
+.right-ans-rem{
+	float: right;
+}
+.close{
+	color:white;
+	height: 30px;
+	width: 50px;
+}
+#fname-error{
+	color:red;
+}
+ #mname-error{
+	color:red;
+ }
+ #lname-error{
+	color:red;
+ }
+ .invalidphone{
+ 	color:red;
+ }
+ .red{
+ 	color:white;
+ 	background-color: red;
+ 	padding: 0px 10px;
+ }
+ .orange{
+ 	color:white;
+ 	background-color: orange;
+ 	padding: 0px 10px;
+ }
+ .green{
+ 	color:white;
+ 	background-color: green;
+ 	padding: 0px 10px;
+ }
+ body{
+ 	color:white! important;
+ }
+ .photo{
+ 	margin: 5px 56px 15px -32px !important;	
+ }
+ 

@@ -1,0 +1,27 @@
+.entry:not(:first-of-type)
+{
+    margin-top: 10px;
+}
+
+.glyphicon
+{
+    font-size: 12px;
+}
+.entry:not(:first-of-type)
+{
+    margin-top: 10px;
+}
+
+.glyphicon
+{
+    font-size: 12px;
+}
+#cat-filter{
+	float: right;
+}
+.search{
+	margin:0px 2px -22px 232px;
+}
+.search-user{
+	float:right;
+}
