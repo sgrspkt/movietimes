@@ -5,7 +5,31 @@ $action = isset($_GET['action']) ? $_GET['action'] : '';
 
 
 switch($page){
-			/*question section */
+/*admin section */
+
+case 'admin':
+if($action == 'add'){
+	
+$page_to_load = "views/add_admin.php";
+break;
+}
+else if($action == 'view'){
+$page_to_load= "views/view_admin.php";
+break;
+}else if ($action=='delete'){
+	$page_to_load="controller/process_admin.php";
+	break;
+}
+	else if($action=='update'){
+		$page_to_load="views/update_admin.php";
+	break;
+	}
+default:
+{
+	$page_to_load="dashboard.php";
+}
+
+/*hall section */
 
 case 'hall':
 if($action == 'add'){
@@ -21,7 +45,7 @@ break;
 	break;
 }
 	else if($action=='update'){
-		$page_to_load="view/update_moviehall.php";
+		$page_to_load="views/update_moviehall.php";
 	break;
 	}
 default:
@@ -29,6 +53,29 @@ default:
 	$page_to_load="dashboard.php";
 }
 
+/*about section */
+
+case 'about':
+if($action == 'add'){
+	
+$page_to_load = "views/add_about.php";
+break;
+}
+else if($action == 'view'){
+$page_to_load= "views/view_about.php";
+break;
+}else if ($action=='delete'){
+	$page_to_load="controller/process_about.php";
+	break;
+}
+	else if($action=='update'){
+		$page_to_load="views/update_about.php";
+	break;
+	}
+default:
+{
+	$page_to_load="dashboard.php";
+}
 		
 
 				/*Score Section*/

@@ -30,9 +30,20 @@ $objAdmin=new admin();
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs"><?php if($_SESSION['username'] != null ){
+              <span class="hidden-xs">
+      
+                <?php 
+                  $views = $objAdmin->viewAdmin();
+                  foreach ($views as $value) {
+                    echo $value['username'];
+                  }
+               /* if($_SESSION['username'] != null ){
                 echo "<span>Welcome</span>  " . $_SESSION['username'];
-                }?></span>
+                }*/
+                ?>
+                  
+
+                </span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -40,20 +51,12 @@ $objAdmin=new admin();
                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                <?php if($_SESSION['username'] != null ){
-                echo $_SESSION['username'];
-                //echo $_SESSION['admin_id'];
-                }
-                 $views = $objAdmin->viewAdmin();
-                 if(sizeof($views>0)){
-    foreach($views as $value){
-      
-      echo "-".$value['role'];
-     
-  
-  }
-    }           
 
+                <?php foreach ($views as $value) {
+                    echo $value['username'];
+                  }
+                
+               
                  ?>
                  
                 </p>

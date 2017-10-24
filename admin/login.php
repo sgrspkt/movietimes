@@ -30,9 +30,9 @@
   <div class="login-box-body">
     <p class="login-box-msg">Sign in to start your session</p>
 
-    <form action="process/process_login.php" method="post" id="login-admin-form">
+    <form action="controller/process_login.php" method="post" id="login-admin-form">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="username" placeholder="Username" id="admin_username">
+        <input type="text" class="form-control" name="email" placeholder="Email" id="admin_username">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
@@ -45,7 +45,8 @@
       <div class="row">
         
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat" id="sign-in-admin">Sign In</button>
+          <button type="submit" class="btn btn-primary btn-block btn-flat" id="sign-in-admin" name="admin
+          _login">Sign In</button>
         </div>
         <!-- /.col -->
       </div>
