@@ -9,7 +9,7 @@ switch($page){
 
 case 'admin':
 if($action == 'add'){
-	
+
 $page_to_load = "views/add_admin.php";
 break;
 }
@@ -33,7 +33,7 @@ default:
 
 case 'hall':
 if($action == 'add'){
-	
+
 $page_to_load = "views/add_moviehall.php";
 break;
 }
@@ -57,7 +57,7 @@ default:
 
 case 'about':
 if($action == 'add'){
-	
+
 $page_to_load = "views/add_about.php";
 break;
 }
@@ -76,18 +76,30 @@ default:
 {
 	$page_to_load="dashboard.php";
 }
-		
 
-				/*Score Section*/
 
-case 'score';
+				/*now showing Section*/
+
+case 'nowshowing';
 if($action == 'view'){
-$page_to_load= "views/view_score.php";
+$page_to_load= "views/nowshowing.php";
 }
 break;
 default:
 {
 	$page_to_load="dashboard.php";
+}
+
+/*upcoming Section*/
+
+case 'upcoming';
+if($action == 'view'){
+$page_to_load= "views/upcoming.php";
+}
+break;
+default:
+{
+$page_to_load="dashboard.php";
 }
 
 }

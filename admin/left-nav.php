@@ -9,7 +9,7 @@
         <div class="pull-left info">
 <?php $value['username'];
                 ?>
-          
+
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -35,7 +35,7 @@
           <ul class="treeview-menu">
             <?php
             require_once('model/admin.class.php');
-            $admin=new Admin(); 
+            $admin=new Admin();
             $views = $admin->viewAdmin();
             foreach($views as $view){
               if($view['role'] == '1'){ ?>
@@ -52,6 +52,8 @@
           <ul class="treeview-menu">
             <li class="active"><a href="index.php?page=hall&action=add"><i class="fa fa-circle-o"></i> Add Movie Hall</a></li>
             <li><a href="index.php?page=hall&action=view"><i class="fa fa-circle-o"></i> View Movie Hall</a></li>
+            <li><a href="index.php?page=nowshowing&action=view"><i class="fa fa-circle-o"></i> Now Showing Movies</a></li>
+            <li><a href="index.php?page=upcoming&action=view"><i class="fa fa-circle-o"></i> Upcoming Movies</a></li>
           </ul>
         </li>
 
