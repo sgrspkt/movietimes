@@ -1,10 +1,10 @@
-<?php 
+<?php
 session_start();
 include('load.php');
 //var_dump($_SESSION['email']);
-/*if(!$_SESSION['email']){
+if(!$_SESSION['username']){
   header('location:login.php');
-}*/
+}
 
 ?>
 <!DOCTYPE html>
@@ -65,7 +65,7 @@ include('load.php');
         Dashboard
         <small>Control panel</small>
       </h1>
-      <?php 
+      <?php
 $page = isset($_GET['page']) ? $_GET['page'] : '';
 
 $action = isset($_GET['action']) ? $_GET['action'] : '';

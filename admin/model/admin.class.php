@@ -11,11 +11,11 @@ class Admin extends connection{
 	private $twitter_url;
 	private $instagram_url;
 	private $role;
-	
+
 	/*public function __construct(){
 		parent::__construct();
 	}*/
-	
+
 	public function setAdminID($ad=''){
 		$this->admin_id=$ad;
 	}
@@ -49,71 +49,87 @@ class Admin extends connection{
 	public function setRole($re=''){
 		$this->role=$re;
 	}
-	
-		
+
+
 	//---------------adding the admin-----------------
 
 	public function addAdmin()
-		{	
+		{
 try
 {
- 
+
     $con = new Connection();
 $db = $con->openConnection();
- 
+
      // sql to create table
- 
+
     $sql = $db->prepare("INSERT into admin (username,password,ckpassword,email,phone,logo,facebook_url, twitter_url,instagram_url) VALUES('$this->admin_username','$this->admin_password','$this->admin_ckpassword','$this->admin_email','$this->admin_phone','$this->admin_logo','$this->facebook_url','$this->twitter_url','$this->instagram_url')") ;
     // inserting a record
     if($sql->execute()){
     	return true;
     };
- 
+
    // echo "New record created successfully";
- 
+
 }
- 
+
 catch (PDOException $e)
- 
+
 {
- 
+
     echo "There is some problem in connection: " . $e->getMessage();
- 
+
 }
 		}
-	
-	
-	
+
+
+
 	//---------------------validate admin --------------------------------//
 public function validateAdmin(){
 	$con = new Connection();
     $db = $con->openConnection();
-	$data = $db->query("SELECT * FROM admin WHERE email='$this->admin_email' AND password='$this->admin_password'"); 
-				$admin = $data->fetchAll();
-				
-return $admin;	
+		//echo $this->admin_email. $this->admin_password;
+
+	$data = $db->query("SELECT * FROM admin WHERE email='$this->admin_email' AND password='$this->admin_password'");
+	// var_dump($data); die();
+$execute= $data->execute();
+
+$admin = $data->fetchAll();
+
+return $admin;
 }
-	
+
 
 //------------------view admin section ------------------------//
 		public function viewAdmin(){
-			
 			$con = new Connection();
     $db = $con->openConnection();
+			if(isset($this->admin_id)){
+				$data = $db->query("SELECT * FROM admin where admin_id='$this->admin_id'");
+							$admin = $data->fetchAll();
+
+			}elseif (isset($this->username)) {
+				$data = $db->query("SELECT * FROM admin where admin_username='$this->admin_username'");
+							$admin = $data->fetchAll();
+			}
+			else{
+
 	$data = $db->query("SELECT * FROM admin");
 				$admin = $data->fetchAll();
-return $admin;	
 
-			
+			}
+return $admin;
+
+
 }
 
 //----------------------------update admin section-----------------------------//
 	public function updateAdmin(){
 		$con = new Connection();
             $db = $con->openConnection();
-		$this->admin_id = (int)$this->admin_id; 
+		$this->admin_id = (int)$this->admin_id;
 		$sql="UPDATE admin SET username='$this->username', password='$this->admin_password', ckpassword='$this->admin_ckpassword', email='$this->admin_email', phone='$this->admin_phone', logo='$this->admin_logo', facebook_url='$this->facebook_url', twitter_url='$this->twitter_url', instagram_url='$this->instagram_url' WHERE id= $this->admin_id ";
-		
+
 		$statement = $db->prepare($sql);
 		$update = $statement->execute();
 

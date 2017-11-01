@@ -23,7 +23,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <b>Quiz</b>APP
+    <b>Movies</b>Times
   </div>
   <div class="login-danger"></div>
   <!-- /.login-logo -->
@@ -32,18 +32,18 @@
 
     <form action="controller/process_login.php" method="post" id="login-admin-form">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="email" placeholder="Email" id="admin_username">
-        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        <input type="text" class="form-control" name="email" placeholder="Enter Your Email" id="admin_username">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" name="password" placeholder="Password" id="admin_password">
+        <input type="password" class="form-control" name="password" placeholder="Enter Your Password" id="admin_password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
       <input type="hidden" class="form-control" name="admin_id">
       </div>
       <div class="row">
-        
+
         <div class="col-xs-4">
           <button type="submit" class="btn btn-primary btn-block btn-flat" id="sign-in-admin" name="admin
           _login">Sign In</button>
@@ -52,7 +52,7 @@
       </div>
     </form>
 
-    
+
   </div>
   <!-- /.login-box-body -->
 </div>

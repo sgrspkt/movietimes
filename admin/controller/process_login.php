@@ -14,22 +14,25 @@ $password=md5($password);
 $objValidate->setEmail($email);
 $objValidate->setPassword($password);
 $view= $objValidate->validateAdmin();
-/*var_dump($view);
-die();*/
+// var_dump($view);
+// die();
 $loadminObj = new Locate();
-/*echo '<pre>';
-print_r($view);*/
+foreach ($view as $value) {
+	// echo '<pre>';
+	// var_dump($value);
+	$username = $value['username'];
+	$role = $value['role'];
+}
+//die();
 if(!empty($view)){
-	//echo 'login';
-	//header('location:../index.php?page=admin&user='.$name);
-	//$_SESSION['email']=$email;
-	$loadminObj->getLocation('../admin/index.php?email='.$email);
+
+	$_SESSION['username']=$username;
+	$loadminObj->getLocation('../index.php?role='.$role);
 	//header('location:../index.php?Email='.$email);
-	
+
 }else{
-	
-	header('location:../login.php');
-	echo 'not login';
+$loadminObj->getLocation('../admin/login.php');
+
 }
 
 ?>

@@ -1,5 +1,5 @@
      $(document).ready(function () {
-             
+
      $('#sign-in-admin').click(function(){
         console.log($('#admin_username').val());
     var form = $('#login-admin-form');
@@ -10,23 +10,29 @@
         $.post($('#login-admin-form').attr('action'),$('#login-admin-form :input').serializeArray(),
                 function(data){
                     if(jQuery.trim(data) === "success"){
-                        window.location.href="index.php"; 
+                        window.location.href="index.php";
                     }else{
                         console.log(data);
                         $('.login-danger').addClass('alert alert-danger ')
-                    $('.login-danger').html(data);                  
+                    $('.login-danger').html(data);
                     }
                     });
                 }
         });
-    
+
     $('#login-admin-form').submit(function(){
         return false;
-    });        
+    });
 
-     });      
+    //advertisement enable disabled
+
+    $('.action-enable').click(function(){
+      console.log('enable');
+    });
+
+     });
      /*plus minus script*/
-     
+
           $(function()
 {
     $(document).on('click', '.btn-adds', function(e)
@@ -48,6 +54,3 @@
     return false;
   });
 });
-
-
-

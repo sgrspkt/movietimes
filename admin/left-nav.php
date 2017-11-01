@@ -7,7 +7,7 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-<?php $value['username'];
+<?php $_SESSION['username'];
                 ?>
 
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
@@ -36,11 +36,19 @@
             <?php
             require_once('model/admin.class.php');
             $admin=new Admin();
-            $views = $admin->viewAdmin();
-            foreach($views as $view){
-              if($view['role'] == '1'){ ?>
+            $username = $_SESSION['username'];
+            $admin->setUsername($username);
+            $views = $admin->viewAdmin($admin);
+            //$role_id = $_GET['role'];
+            // echo '<pre>';
+            // var_dump($views);
+
+
+            //foreach($views as $view){
+
+              if(isset($_GET['role']) == '1'){ ?>
              <li><a href="index.php?page=admin&action=add"><i class="fa fa-circle-o"></i> Add Admin</a></li>
-           <?php } } ?>
+           <?php } //} ?>
             <li><a href="index.php?page=admin&action=view"><i class="fa fa-circle-o"></i> View Admin</a></li>
           </ul>
         </li>
@@ -67,6 +75,28 @@
             <li><a href="index.php?page=about&action=view"><i class="fa fa-circle-o"></i> View About</a></li>
           </ul>
         </li>
+
+        <!--ad-->
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>advertisement</span> <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a href="index.php?page=ad&action=add"><i class="fa fa-circle-o"></i> Add advertisement</a></li>
+            <li><a href="index.php?page=ad&action=view"><i class="fa fa-circle-o"></i> View advertisement</a></li>
+          </ul>
+        </li>
+
+        <!--subscriber-->
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>subscriber</span> <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="index.php?page=subscriber&action=view"><i class="fa fa-circle-o"></i> View Subscriber</a></li>
+          </ul>
+        </li>
+
 
       </ul>
     </section>

@@ -2,6 +2,11 @@
 require_once('connection.class.php');
 
 class Upcoming extends Connection {
+	private $movie_details_id;
+
+	public function setMovieDetailsId($ud=''){
+		$this->movie_details_id=$ud;
+	}
 		//--------------------------- Add movies-------------------------//
 		public function addUpcomingMovie()
 		{
@@ -107,7 +112,7 @@ class Upcoming extends Connection {
 			$con = new Connection();
             $db = $con->openConnection();
 			if(isset($this->movie_details_id)){
-				$data = $db->query("SELECT * FROM upcoming WHERE upcoming_movie_id = '$this->upcoming_movie_id'");
+				$data = $db->query("SELECT * FROM upcoming WHERE upcoming_movie_id = '$this->movie_details_id'");
 				$movies = $data->fetchAll();
 }
 			else{

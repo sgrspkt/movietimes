@@ -102,5 +102,42 @@ default:
 $page_to_load="dashboard.php";
 }
 
+/*advertisement section */
+
+case 'ad':
+if($action == 'add'){
+
+$page_to_load = "views/add_ad.php";
+break;
+}
+else if($action == 'view'){
+$page_to_load= "views/view_ad.php";
+break;
+}else if ($action=='delete'){
+	$page_to_load="controller/process_ad.php";
+	break;
+}
+	else if($action=='update'){
+		$page_to_load="views/update_ad_action.php";
+	break;
+	}
+default:
+{
+	$page_to_load="dashboard.php";
+}
+
+/*advertisement section */
+
+case 'subscriber':
+
+if($action == 'view'){
+$page_to_load= "views/view_subscriber.php";
+break;
+}
+default:
+{
+	$page_to_load="dashboard.php";
+}
+
 }
 ?>
