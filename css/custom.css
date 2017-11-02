@@ -1,3 +1,6 @@
 ul {
   list-style-type: none;
 }
+.requested-movies{
+  height: 400px;
+}

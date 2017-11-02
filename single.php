@@ -65,7 +65,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			     <div class="w3_agilits_inner_bottom">
 			            <div class="col-md-6 wthree_agile_login">
 						     <ul>
-									<li><i class="fa fa-phone" aria-hidden="true"></i> (+000) 009 455 4088</li>
+									<li><i class="fa fa-phone" aria-hidden="true"></i> (+977)9845398624</li>
+									<li><i class="fa fa-envelope" aria-hidden="true"></i> contact@sagars.com.np</li>
 
 
 								</ul>
@@ -144,7 +145,6 @@ foreach($views as $value){
 						<div class="agile_featured_movies">
 				            <div class="inner-agile-w3l-part-head">
 					            <h3 class="w3l-inner-h-title"><?php echo $value['title'];?></h3>
-								<p class="w3ls_head_para">Add short Description</p>
 							</div>
 							   <div class="latest-news-agile-info">
 								   <div class="col-md-8 latest-news-agile-left-content">
@@ -152,7 +152,7 @@ foreach($views as $value){
 											<div class="single video_agile_player">
 
 										            <div class="video-grid-single-page-agileits">
-														<iframe width="850" height="500" src="<?php echo $value['trailer'];?>" frameborder="0" allowfullscreen=""></iframe>
+														<iframe width="790" height="500" src="<?php echo $value['trailer'];?>" frameborder="0" allowfullscreen=""></iframe>
 													</div>
 													 <h4><?php echo $value['title'];?></h4>
 										    </div>
@@ -282,9 +282,9 @@ foreach($views as $value){
 					foreach($views as $value){
 
 											?>
-										            <div class="video-grid-single-page-agileits">
+										            <!-- <div class="video-grid-single-page-agileits">
 																	<iframe width="355" height="300" src="<?php echo $value['trailer'];?>" frameborder="0" allowfullscreen=""></iframe>
-														</div>
+														</div> -->
 
 
 										        <div class="player-text side-bar-info">

@@ -14,9 +14,13 @@ $views=$viewobj->viewUpcomingMovies();
   $i=1;
   if(sizeof($views>0)){
   foreach($views as $value){
+    $old = $value['thumbnail_image'];
+    $new =  substr($old, 0, strpos($old, "&"));
+
   ?>
        <div class="col-md-2 w3l-movie-gride-agile requested-movies">
-                 <a href="single.php?id=<?php echo $value['upcoming_movie_id']?>" class="hvr-sweep-to-bottom"><img src="<?php echo $value['thumbnail_image'];?>" width="250px" height="300px" title="Movies Pro" class="img-responsive" id="img-res-<?php echo $i;?>">
+                 <a href="single.php?id=<?php echo $value['upcoming_movie_id']?>" class="hvr-sweep-to-bottom">
+                   <img src="<?php echo $new;?>" width="300px" height="300px" title="Movies Pro" class="img-responsive" id="img-res-<?php echo $i;?>">
                    <div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
                  </a>
                    <div class="mid-1 agileits_w3layouts_mid_1_home">

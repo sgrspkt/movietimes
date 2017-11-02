@@ -42,8 +42,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!--//header-w3l-->
 			<!--/banner-info-->
 			   <div class="baner-info">
-			      <h3>Latest <span>On</span>Line <span>Mo</span>vies</h3>
-				  <h4>In space no one can hear you scream.</h4>
+
+				  <h4>Get the showtime on your couch</h4>
 
 			   </div>
 			<!--/banner-ingo-->
@@ -56,7 +56,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			     <div class="w3_agilits_inner_bottom">
 			            <div class="col-md-6 wthree_agile_login">
 						     <ul>
-									<li><i class="fa fa-phone" aria-hidden="true"></i> (+000) 009 455 4088</li>
+									<li><i class="fa fa-phone" aria-hidden="true"></i>+977-9845398624</li>
+									<li><i class="fa fa-envelope" aria-hidden="true"></i>info@sagars.com.np</li>
 
 
 								</ul>

@@ -18,7 +18,8 @@ $subscriber->setSubscribeDate($date);
 $flag=$subscriber->addSubscribe();
 
 if($flag){
-	require_once('mail.php');
+	//require_once('mail.php');
+
 	$_SESSION['subscriber'] = true;
 		//$_SESSION['rating_msg']=$addaboutObj->success="The hall successfully added";
 		header('location:../../index.php');
