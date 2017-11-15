@@ -8,9 +8,11 @@ $views=$viewobj->viewUpcomingMovies();
 ?>
 <h3 class="agile_w3_title">Upcoming <span>Movies</span> </h3>
 <div class="wthree_agile-requested-movies" id="upcoming">
+  <div class="upcoming-movies">
   <?php
   // echo '<pre>';
   // var_dump($views);
+  
   $i=1;
   if(sizeof($views>0)){
   foreach($views as $value){
@@ -18,6 +20,7 @@ $views=$viewobj->viewUpcomingMovies();
     $new =  substr($old, 0, strpos($old, "&"));
 
   ?>
+  
        <div class="col-md-2 w3l-movie-gride-agile requested-movies">
                  <a href="single.php?id=<?php echo $value['upcoming_movie_id']?>" class="hvr-sweep-to-bottom">
                    <img src="<?php echo $new;?>" width="300px" height="300px" title="Movies Pro" class="img-responsive" id="img-res-<?php echo $i;?>">
@@ -47,13 +50,15 @@ $views=$viewobj->viewUpcomingMovies();
              </div>
 
 
+
 </div>
 <?php
 $i++;
 }
 }
 ?>
-
+</div>
 
 <div class="clearfix"></div>
-</div>
+<!-- </div>
+</div> -->

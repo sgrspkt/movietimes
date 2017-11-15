@@ -83,50 +83,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="w3_content_agilleinfo_inner">
 					<div class="agile_featured_movies">
 							<div class="inner-agile-w3l-part-head">
-					            <h3 class="w3l-inner-h-title">Contact</h3>
-								<p class="w3ls_head_para">Add short Description</p>
+					            <h3 class="w3l-inner-h-title">About</h3>
+
 							</div>
 						<div class="w3_mail_grids">
-								<form action="#" method="post">
-									<div class="col-md-6 w3_agile_mail_grid">
-										<span class="input input--ichiro">
-											<input class="input__field input__field--ichiro" type="text" id="input-25" placeholder=" " required="">
-											<label class="input__label input__label--ichiro" for="input-25">
-												<span class="input__label-content input__label-content--ichiro">Your Name</span>
-											</label>
-										</span>
-										<span class="input input--ichiro">
-											<input class="input__field input__field--ichiro" type="email" id="input-26" placeholder=" " required="">
-											<label class="input__label input__label--ichiro" for="input-26">
-												<span class="input__label-content input__label-content--ichiro">Your Email</span>
-											</label>
-										</span>
-										<span class="input input--ichiro">
-											<input class="input__field input__field--ichiro" type="text" id="input-27" placeholder=" " required="">
-											<label class="input__label input__label--ichiro" for="input-27">
-												<span class="input__label-content input__label-content--ichiro">Your Phone Number</span>
-											</label>
-										</span>
+							
 
-									</div>
-									<div class="col-md-6 w3_agile_mail_grid two">
-										<textarea name="Message" placeholder="Your Message" required=""></textarea>
-										<input type="submit" value="Submit">
-									</div>
-									<div class="clearfix"> </div>
-								</form>
-								<div class="agileits-get-us">
+								<!-- <div class="agileits-get-us">
 									<ul>
 										<li><i class="fa fa-map-marker" aria-hidden="true"></i>Kathmandu, Nepal</li>
 										<li><i class="fa fa-phone" aria-hidden="true"></i>  +977 9845398624</li>
 										<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:contact@sagars.com.np">contact@sagars.com.np</a></li>
 									</ul>
 
-							</div>
+							</div> -->
 
 					</div>
 					</div>
-							
+							<!-- <div class=" map">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56516.31625952153!2d85.29111316473103!3d27.708955944389654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1bf18db1ea!2sKathmandu+44600!5e0!3m2!1sen!2snp!4v1509622813088"></iframe>
+							</div> -->
 				</div>
 			<!--//content-inner-section-->
 

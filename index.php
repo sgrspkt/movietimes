@@ -68,8 +68,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<!--//banner-bottom-->
 
 			<!--/content-inner-section-->
-				<div class="w3_content_agilleinfo_inner">
-					<div class="agile_featured_movies">
+				<!-- <div class="w3_content_agilleinfo_inner">
+					<div class="agile_featured_movies"> -->
 						<!--/agileinfo_tabs-->
 
 				<!--//tab-section-->
