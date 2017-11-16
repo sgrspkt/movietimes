@@ -33,13 +33,6 @@ $objAdmin=new admin();
 
                 <?php
 
-                  // $views = $objAdmin->viewAdmin();
-                  // foreach ($views as $value) {
-                  //   echo $value['username'];
-                  // }
-               /* if($_SESSION['username'] != null ){
-                echo "<span>Welcome</span>  " . $_SESSION['username'];
-                }*/
                 echo $_SESSION['username'];
                 ?>
 

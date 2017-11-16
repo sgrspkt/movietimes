@@ -8,12 +8,8 @@ $('.requested-movies').each(function(){
   src.replace(/140/g, "550");
   src.replace(/4:/g, "3");
 
-
-// var name = $(id).attr('id');
-  //.attr('id');
-  //console.log(id);
-  // var image = $(id).attr('src');
-  // var splited = image.split('&')[0];
-  // $(id).attr('src', splited);
 })
+$(".first").click(function(){
+    $(".second").click(); 
+});
 })

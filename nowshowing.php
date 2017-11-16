@@ -2,6 +2,7 @@
 require_once('admin/model/connection.class.php');
 require_once('admin/model/nowshowing.php');
 $now=new Nowshowing();
+$addMovie = $now->addMovie();
 $nowviews=$now->viewMovies();
 
 
@@ -17,16 +18,20 @@ $nowviews=$now->viewMovies();
   $i=1;
   if(sizeof($nowviews>0)){
   foreach($nowviews as $value){
-    if(!empty($value['time_detail'])){
+   /* echo '<pre>';
+    var_dump($value);*/
+    if(!empty($value['time_detail'])){    
   ?>
 <div class="item">
   <div class="w3l-movie-gride-agile w3l-movie-gride-slider ">
     <div class="movie_time_detail">
-    <?php echo $value['time_detail'];?>
+    <?php 
+    echo $value['time_detail'] = strip_tags($value['time_detail']);
+    //echo $value['ticket_detail'];
+    //echo $value['time_detail'];
+    ?>
   </div>
-    <!-- <a href="single.html" class="hvr-sweep-to-bottom"><img src="images/m5.jpg" title="Movies Pro" class="img-responsive" alt=" " />
-      <div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
-    </a> -->
+   
     <div class="mid-1 agileits_w3layouts_mid_1_home">
       <div class="w3l-movie-text">
         <h6><a href="#"><?php echo $value['hall_detail'];?></a></h6>

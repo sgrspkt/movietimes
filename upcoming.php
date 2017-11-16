@@ -1,8 +1,16 @@
 <?php
 require_once('admin/model/connection.class.php');
 require_once('admin/model/upcoming.php');
+
 $viewobj=new Upcoming();
-$views=$viewobj->viewUpcomingMovies();
+$addMovie=$viewobj->addUpcomingMovie();
+
+$views = $viewobj->viewUpcomingMovies();
+
+// $viewobj=new Upcoming();
+// $views=$viewobj->viewUpcomingMovies();
+// var_dump($views);
+
 
 
 ?>
@@ -55,6 +63,8 @@ $views=$viewobj->viewUpcomingMovies();
 <?php
 $i++;
 }
+}else{
+  echo 'no data found';
 }
 ?>
 </div>

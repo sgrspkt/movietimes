@@ -11,6 +11,13 @@
    <h1><a  href="index.php"><span>M</span>ovie <span>T</span>imes</a></h1>
  </div>
  <!-- navbar-header -->
+ <center> <?php 
+      if(isset($_GET['msg'])){
+        echo '<h3 style="color: red">'.$_GET['msg'].'</h3>';
+      }else{
+
+      }
+      ?></center>
  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
      <ul class="nav navbar-nav">
      <li class="active"><a href="index.php">Home</a></li>

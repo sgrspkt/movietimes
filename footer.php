@@ -14,7 +14,11 @@ $views=$viewobj->viewUpcomingMovies();
       <form action="admin/controller/process_add_subscribe.php" method="post">
         <input type="email" name="email" placeholder="Enter your email...." required="required">
         <input type="submit" value="Subscribe" name="submit_subscribe">
+       
       </form>
+
+    
+     
     </div>    
       <h3 class="text-center follow">Connect <span>Us</span></h3>
         <ul class="social-icons1 agileinfo">
